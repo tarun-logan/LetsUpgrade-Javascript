@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 Assignment </title>
+</head>
+<body>
+    <h1>Question 2 :</h1>
+    <h2>Write the difference between var, let and const with code examples.</h2>
+
+    <p> var : The scope of a variable defined with the keyword “var” is limited to the “function” within which it is defined. If it is defined outside any function, the scope of the variable is global.
+        var is “function scoped”.<p>
+        <p>The below function gives an example of it, check the console for the same.</p>
+        function myFn() {<br>
+            var a = 'LetsUpgrade!';
+            <br>
+            console.log(a); // 'LetsUpgrade!'<br>
+          }<br>
+          console.log(a); // ReferenceError: a is not defined
+    </p>
+    <script>
+        console.log('function block - var : ')
+         function myFn() {
+            var a = 'LetsUpgrade!';
+            console.log(a); 
+          }
+          console.log(a); 
+    </script>
+
+    <p>
+        let : The scope of a variable defined with the keyword “let” or “const” is limited to the “block” defined by curly braces i.e. {} .
+“let” and “const” are “block scoped”.
+    </p>
+
+    <p>
+        if (true) {<br>
+            var a = 'LetsUpgrade!';<br>
+            let b = 'javascript';<br>
+            const c = 'logan';<br>
+
+            console.log(a,b,c); // 'LetsUpgrade! javascript logan';<br>
+           
+            }<br>
+
+            console.log(a,b,c); //ReferenceError: b is not defined<br>
+    </p>
+
+    <script>
+        if (true) {
+            var a = 'LetsUpgrade!';
+            let b = 'javascript';
+            const c = 'logan';
+
+            console.log(a,b,c); 
+            }
+            console.log(a,b,c); 
+           
+    </script>
+
+    <p>
+        const: The scope of a variable defined with the keyword “const” is limited to the block defined by curly braces. However if a variable is defined with keyword const, it cannot be reassigned.
+“const” cannot be re-assigned to a new value. However it CAN be mutated.
+    </p>
+    <p>
+        if (true) {<br>
+            const c = 'logan';<br>
+
+            console.log(c); // 'logan'<br>
+            }<br>
+            console.log(c);//ReferenceError: c is not defined 
+           
+    </p>
+    <script>
+        if (true) {
+            const c = 'logan';
+
+            console.log(c); 
+            }
+            console.log(c); 
+           
+    </script>
+    <p>
+        const c = 'logan';<br>
+        console.log(c); //logan<br>
+        c = 'wolverine';<br>
+        console.log(c); //Assignment to constant variable. <br>
+    </p>
+    <script>
+        {
+            const c = 'logan';
+            console.log(c); 
+            c = 'wolverine';
+            console.log(c);
+        }
+    </script>
+</body>
+</html>

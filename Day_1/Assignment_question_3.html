@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 Assignment</title>
+</head>
+<body>
+    <h1>Question 3 :</h1>
+    
+    <h2>Write a brief intro on available data types in Javascript.</h2>
+
+    <p>
+        A value in JavaScript is always of a certain type. For example, a string or a number.
+
+There are eight basic data types in JavaScript.
+    </p>
+    <p>
+        We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:
+        <br>let message = "hello";<br>
+        Programming languages that allow such things, such as JavaScript, are called “dynamically typed”, meaning that there exist data types, but variables are not bound to any of them.
+    </p>
+    <p>
+        Number<br>
+let n = 123;<br>
+n = 12.345;<br>
+The number type represents both integer and floating point numbers.<br>
+
+There are many operations for numbers, e.g. multiplication *, division /, addition +, subtraction -, and so on.
+<br>
+Besides regular numbers, there are so-called “special numeric values” which also belong to this data type: Infinity, -Infinity and NaN.
+<br>
+Infinity represents the mathematical Infinity ∞. It is a special value that’s greater than any number.
+<br>
+NaN represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
+<br>
+alert( "not a number" / 2 ); // NaN, such division is erroneous
+</p>
+
+<p>
+    BigInt<br>
+    In JavaScript, the “number” type cannot represent integer values larger than (253-1) (that’s 9007199254740991), or less than -(-253-1) for negatives. It’s a technical limitation caused by their internal representation.
+    <br>
+    For most purposes that’s quite enough, but sometimes we need really big numbers, e.g. for cryptography or microsecond-precision timestamps.
+    <br>
+    BigInt type was recently added to the language to represent integers of arbitrary length.
+    <br>
+    A BigInt value is created by appending n to the end of an integer:
+    <br>
+const bigInt = 1234567890123456789012345678901234567890n;
+</p>
+
+<p>
+    String<br>
+A string in JavaScript must be surrounded by quotes.
+In JavaScript, there are 3 types of quotes.
+<br>
+Double quotes: "Hello".<br>
+Single quotes: 'Hello'.<br>
+Backticks: `Hello`.
+</p>
+
+<p>
+    Boolean (logical type)<br>
+    The boolean type has only two values: true and false.
+    <br>
+    This type is commonly used to store yes/no values: true means “yes, correct”, and false means “no, incorrect”.
+</p>
+
+<p>
+    The “null” value<br>
+The special null value does not belong to any of the types described above.
+<br>
+It forms a separate type of its own which contains only the null value:
+<br>
+let age = null;
+<br>
+In JavaScript, null is not a “reference to a non-existing object” or a “null pointer” like in some other languages.
+<br>
+It’s just a special value which represents “nothing”, “empty” or “value unknown”.
+</p>
+
+<p>
+    The “undefined” value<br>
+The special value undefined also stands apart. It makes a type of its own, just like null.
+<br>
+The meaning of undefined is “value is not assigned”.
+<br>
+If a variable is declared, but not assigned, then its value is undefined
+</p>
+
+<p>
+    Objects and Symbols<br>
+The object type is special.<br>
+<br>
+All other types are called “primitive” because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.
+<br>
+Being that important, objects deserve a special treatment. We’ll deal with them later in the chapter Objects, after we learn more about primitives.
+<br>
+The symbol type is used to create unique identifiers for objects. We have to mention it here for the sake of completeness, but also postpone the details till we know objects.
+</p>
+
+<script>
+    /*
+The typeof operator
+The typeof operator returns the type of the argument. It’s useful when we want to process values of different types differently or just want to do a quick check.
+
+It supports two forms of syntax:
+
+As an operator: typeof x.
+As a function: typeof(x).
+In other words, it works with parentheses or without them. The result is the same.
+
+The call to typeof x returns a string with the type name:
+    */
+console.log(typeof undefined) // "undefined"
+
+console.log(typeof(0)) // "number"
+
+console.log(typeof 10n) // "bigint"
+
+console.log(typeof true) // "boolean"
+
+console.log(typeof "foo") // "string"
+
+console.log(typeof Symbol("id")) // "symbol"
+
+console.log(typeof Math) // "object"  (1)
+
+console.log(typeof null) // "object"  (2)
+
+console.log(typeof alert) // "function"  (3)
+</script>
+</body>
+</html>
