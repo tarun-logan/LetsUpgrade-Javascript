@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 Assignment</title>
+</head>
+<body>
+    <h1>Question 3</h1>
+    <h2>
+        Write a program to take marks as input from the user and grade him accordingly. Use Conditional
+        statements. Also the same code using switch or ternary.
+        </h2>
+<p>input: 50<br>
+    Output : Marks are 50 and grade is B</p>
+
+  
+    <h4>Check the console for output</h4>
+    <h5>
+        note :<br> grades in evaluation using if and ternary : A+, A, B+, B, C+, C, F.<br>
+        grades in evaluation using switch case : A, B, C.
+    </h5>
+</body>
+<script src="day3.js"></script>
+<script>
+    let result=evaluation();
+    console.log(`evaluation using if : marks = ${result[0].marks}, result = ${result[0].grade}`);
+    console.log(`evaluation using switch case : marks = ${result[1].marks}, result = ${result[1].grade}`);
+    console.log(`evaluation using ternary operator : marks = ${result[2].marks}, result = ${result[2].grade}`);
+   // console.log(`OS name is "${osdetails[0]}" and version is "${osdetails[1]}".`);
+</script>
+</html>
