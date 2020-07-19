@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Assignment</title>
+</head>
+<body>
+    <h2>Question 4</h2>
+    <h3>Make a Calculator in Javascript which can do operations as :<br> Addtion, Subtraction, Multiplication, Division,Square root, Percentage.
+    </h3>
+    <h4>Check the console for output</h4>
+    <script src="day4.js"></script>
+    <script>
+        let num;
+        let operation = window.prompt(`Enter your choice :
+        1 for Addition
+        2 for Subtraction
+        3 for Multiplication
+        4 for Division
+        5 for Modulous
+        6 for Finding root of a number
+        and
+        0 to exit`,1);
+
+        if(operation == '6') {
+            num = window.prompt('Enter a number : ',1);
+            console.log(`The square root of ${num} : ${squareRoot(num)}`); 
+        }else if(operation == '0'){
+            console.log("you have exited.");
+        }else{
+            console.log(calculator(operation));
+        } 
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Assignment</title>
+</head>
+<body>
+    <h2>Question 8</h2>
+    <h3>
+        Replace Function Expressions with arrow functions in the code below:
+    </h3>
+    <p>
+        funtion ask(question,yes,no){ <br>
+            if(confirm(question)) yes() <br>
+            else no();
+        }
+    </p>
+
+    <script src="day4.js"></script>
+    <script>
+       ask("Do you agree?", function(){ alert('you agreed'); }, function(){ alert('you cancelled the execution');});
+    </script>
+
+</body>
+</html>

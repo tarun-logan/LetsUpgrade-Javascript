@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Assignment</title>
+</head>
+<body>
+    <h1>Question 7</h1>
+    <p> An integer number greater than 1 is called a prime if it cannot be divided without a remainder by anything
+        except 1 and itself.<br>
+        In other words, n > 1 is a prime if it can’t be evenly divided by anything except 1 and n.<br>
+        For example, 5 is a prime, because it cannot be divided without a remainder by 2, 3 and 4.
+    </p>
+    <h2>Write the code which outputs prime numbers in the interval from 2 to n.<br>
+        For n = 10 the result will be 2,3,5,7.
+    </h2>
+    <h3>P.S. The code should work for any n, not be hard-tuned for any fixed value</h3>
+    <h4>Check the console for output</h4>   
+</body>
+<script src="day4.js"></script>
+<script>
+ function display(n) {
+    var arr = [];
+    for ( var i = 2; i < n; i+=1 ) {
+        if ( isPrime(i) ) {
+            arr.push(i);
+        }
+    }
+    console.log(`Prime number(s) between 2 to ${n} : ${arr}`);
+}
+let n = window.prompt('Enter a number above 1');
+display(n);
+</script>
+</html>
