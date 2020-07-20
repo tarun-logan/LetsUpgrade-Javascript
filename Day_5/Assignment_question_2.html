@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 Assignment</title>
+</head>
+<body>
+    <h2>Question 2</h2>
+    <h3>Create a Class User with properties as name, age & email. <br>
+        He can login and logout <br>
+        Create another class Moderator which has all the features of User, plus additional functionality to Add coins and remove coins. <br>
+        Create one more class Admin which has all the features of Moderator plus additional features like add a course and delete a particular course for a user
+    </h3>
+    <h4>Check the console for output</h4>
+</body>
+<script src="OOPSInJs.js"></script>
+<script>
+    let user1 = new User('Sowmya',25,'sowmya@gmail.com');
+    let user2 = new User('OC',24,'oc@gmail.com');
+    let mod = new Moderator('Logan',23,'Logan@gmail.com','Moderator');
+    let admin = new Admin('Sandhya',24,'Sandhya@gmail.com');
+    let users = [user1,user2,mod,admin];
+
+
+
+
+    user1.login().logout();
+
+    mod.login().addCoins(user1,5);
+    mod.removeCoins(user1,3);
+    mod.logout();
+
+    admin.login();
+    admin.addCourse(user1,'Javascript');
+    admin.addCourse(user1,'Python');
+    admin.addCourse(user1,'perl');
+    admin.deleteCourse(user1);
+    
+    users.forEach(element => {
+        console.log(element);
+    });
+    admin.logout();
+
+</script>
+</html>
