@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class='gradient'>
+    <h3 id='clock'></h3>
+    <h1 id='welcome'>welcome</h1>
+    <div>
+        <button onclick="darkMode();">Dark Mode</button>
+    </div>
+</body>
+<script src="scripts.js"></script>
+<script>
+    setInterval(clock,1000);
+    document.getElementById('welcome').style.textAlign="center";
+    let user = window.prompt('Hello, May I know your Name please','User');
+    document.getElementById('welcome').innerText='Welcome '+user;
+</script>
+</html>
